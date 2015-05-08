@@ -1,37 +1,31 @@
 
-# standard-format
-
-  [![Build Status](https://travis-ci.org/maxogden/standard-format.svg)](https://travis-ci.org/maxogden/standard-format)
-  [![Dependency Status](https://david-dm.org/maxogden/standard-format.svg?style=flat-square)](https://david-dm.org/maxogden/standard-format)
-
-  **experimental** auto formatter for the easier cases in [standard](https://www.npmjs.com/package/standard)
-
-  [![NPM](https://nodei.co/npm/standard-format.png)](https://nodei.co/npm/standard-format/)
+# semistandard-format
+  This is a fork of [standard-format](https://github.com/maxogden/standard-format) same concept but with semicolons.
 
 ## Installation
 
   Install with npm
 
-    $ npm install -g standard-format
+    $ npm install -g semistandard-format
 
 ## Example Usage
 
   Output all formatted javascript in a directory and subdirectories to stdout
 
-    $ standard-format
+    $ semistandard-format
 
   Format all javascript files, overwriting them into standard format
 
-    $ standard-format -w
+    $ semistandard-format -w
 
   Format javascript over stdin
 
-    $ standard-format < file.js > formatted-file.js
+    $ semistandard-format < file.js > formatted-file.js
 
   Format and overwrite specific files
 
-    $ standard-format -w file1.js file2.js
+    $ semistandard-format -w file1.js file2.js
 
 ### Editor plugins
 
-  - Sublime Text: [sublime-standard-format](https://packagecontrol.io/packages/StandardFormat)
+  - Atom: [linter-js-standard](https://github.com/ricardofbarros/linter-js-standard)
