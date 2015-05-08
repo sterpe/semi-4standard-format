@@ -3,9 +3,7 @@
   "version": "1.3.6",
   "description": "attempts to reformat javascript to comply with feross/standard style but with semicolons",
   "main": "index.js",
-  "bin": {
-    "semistandard-format": "./bin.js"
-  },
+  "bin": "./bin.js",
   "scripts": {
     "test": "semistandard && tape test/*.js | tap-spec",
     "test-file": "<test.js ./bin.js | semistandard",
