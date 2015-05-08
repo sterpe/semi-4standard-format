@@ -1,29 +1,32 @@
 {
-  "name": "standard-format",
+  "name": "semistandard-format",
   "version": "1.3.6",
-  "description": "attempts to reformat javascript to comply with feross/standard style",
+  "description": "attempts to reformat javascript to comply with feross/standard style but with semicolons",
   "main": "index.js",
-  "bin": "./bin.js",
+  "bin": {
+    "semistandard-format": "./bin.js"
+  },
   "scripts": {
-    "test": "standard && tape test/*.js | tap-spec",
-    "test-file": "<test.js ./bin.js | standard",
-    "failing": "standard && tape test/failing/*.js | tap-spec"
+    "test": "semistandard && tape test/*.js | tap-spec",
+    "test-file": "<test.js ./bin.js | semistandard",
+    "failing": "semistandard && tape test/failing/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maxogden/standard-format.git"
+    "url": "https://github.com/ricardofbarros/semistandard-format.git"
   },
   "author": "max ogden",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/maxogden/standard-format/issues"
+    "url": "https://github.com/ricardofbarros/semistandard-format/issues"
   },
-  "homepage": "https://github.com/maxogden/standard-format",
+  "homepage": "https://github.com/ricardofbarros/semistandard-format",
   "dependencies": {
     "esformatter": "^0.6.0",
     "esformatter-eol-last": "^1.0.0",
     "esformatter-literal-notation": "^1.0.0",
     "esformatter-quotes": "^1.0.0",
+    "esformatter-semicolons": "^1.0.3",
     "esformatter-spaced-lined-comment": "^2.0.0",
     "find-root": "^0.1.1",
     "glob": "^5.0.5",
@@ -37,12 +40,12 @@
     "once": "^1.3.1",
     "skip-stream": "0.0.3",
     "split": "^0.3.3",
-    "standard": "*",
+    "semistandard": "*",
     "stream-reduce": "^1.0.3",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0"
   },
-  "standard": {
+  "semistandard": {
     "ignore": [
       "test.js",
       "**test/failing/**"

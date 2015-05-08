@@ -15,8 +15,6 @@ var DEFAULT_IGNORE = [
 ]
 
 var MULTI_NEWLINE = /((?:\r?\n){3,})/g
-var EOL_SEMICOLON = /;\r?\n/g
-var EOL_SEMICOLON_WITH_COMMENT = /;(?=\s*\/\/[\s\w]*\r?\n)/g
 var SOF_NEWLINES = /^(\r?\n)+/g
 var EOL = os.EOL
 
@@ -25,8 +23,6 @@ module.exports.transform = function (file) {
     .replace(MULTI_NEWLINE, EOL + EOL)
 
   var formatted = formatter.format(file, ESFORMATTER_CONFIG)
-    .replace(EOL_SEMICOLON, EOL)
-    .replace(EOL_SEMICOLON_WITH_COMMENT, '')
     .replace(SOF_NEWLINES, '')
 
   return formatted
