@@ -26,6 +26,8 @@
 
     $ semistandard-format -w file1.js file2.js
 
-### Editor plugins
+### Science :mortar_board:
 
-  - Atom: [linter-js-standard](https://github.com/ricardofbarros/linter-js-standard)
+  > A new step should be added to the modification cycle: modifying the program to make it readable.
+
+  [Elshoff & Marcotty, 1982](http://dl.acm.org/citation.cfm?id=358596)
