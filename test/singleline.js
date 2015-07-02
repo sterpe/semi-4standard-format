@@ -20,6 +20,12 @@ var noops = [
   },
   { str: 'window.wrapFunctionsUntil(1)\n',
     msg: 'Noop non-functions with function in the name'
+  },
+  { str: 'import * as lib from \'lib\'\n',
+    msg: 'Noop ES2015 import'
+  },
+  { str: 'function* blarg (foo) {yield foo}\n',
+    msg: 'Noop ES2015 generator'
   }
 ]
 
@@ -72,8 +78,8 @@ var transforms = [
     msg: 'Space after commas in function parameters'
   },
   {
-    str: '[1,2,3]\n',
-    expect: '[1, 2, 3]\n',
+    str: 'var array = [1,2,3]\n',
+    expect: 'var array = [1, 2, 3]\n',
     msg: 'Space after commas in array'
   },
   {
@@ -99,13 +105,30 @@ var transforms = [
   {
     str: 'var x = 123; // Useful comment\n',
     expect: 'var x = 123 // Useful comment\n',
-    msg: 'Remove uneeded trailing semicolons that are followed by a comment'
+    msg: 'Remove unneeded trailing semicolons that are followed by a comment'
+  },
+  {
+    str: 'var x = 123; /* Useful comment */\n',
+    expect: 'var x = 123 /* Useful comment */\n',
+    msg: 'Remove unneeded trailing semicolons that are followed by a multiline comment'
   }
 ]
 
 test('singleline transforms', function (t) {
   t.plan(transforms.length)
   transforms.forEach(function (obj) {
+    t.equal(fmt(obj.str), obj.expect, obj.msg)
+  })
+})
+
+var cr = new RegExp(/\n/g)
+var crlf = '\r\n'
+
+test('singleline transforms CRLF', function (t) {
+  t.plan(transforms.length)
+  transforms.forEach(function (obj) {
+    obj.str = obj.str.replace(cr, crlf)
+    obj.expect = obj.expect.replace(cr, crlf)
     t.equal(fmt(obj.str), obj.expect, obj.msg)
   })
 })

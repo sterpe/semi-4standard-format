@@ -1,6 +1,5 @@
 var path = require('path')
 var fs = require('fs')
-var os = require('os')
 var glob = require('glob')
 var findRoot = require('find-root')
 var Minimatch = require('minimatch').Minimatch
@@ -14,13 +13,15 @@ var DEFAULT_IGNORE = [
   '**/bundle.js'
 ]
 
-var MULTI_NEWLINE = /((?:\r?\n){3,})/g
+var MULTI_NEWLINE_N = /((?:\n){3,})/g
+var MULTI_NEWLINE_RN = /((?:\r\n){3,})/g
+
 var SOF_NEWLINES = /^(\r?\n)+/g
-var EOL = os.EOL
 
 module.exports.transform = function (file) {
   file = file
-    .replace(MULTI_NEWLINE, EOL + EOL)
+    .replace(MULTI_NEWLINE_N, '\n\n')
+    .replace(MULTI_NEWLINE_RN, '\r\n\r\n')
 
   var formatted = formatter.format(file, ESFORMATTER_CONFIG)
     .replace(SOF_NEWLINES, '')
