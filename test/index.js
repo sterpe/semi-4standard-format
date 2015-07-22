@@ -10,7 +10,7 @@ test('test.js ran through formatter', function (t) {
   var lines = formatted.split('\n')
 
   run(formatted, function (err, reports) {
-    t.ok(!err, 'no runner errors')
+    t.ok(!err, 'no runner errors js')
 
     reports.forEach(function (report) {
       var highlight = run.highlight(lines, report)

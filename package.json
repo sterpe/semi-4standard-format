@@ -1,11 +1,11 @@
 {
   "name": "semistandard-format",
-  "version": "1.4.0",
+  "version": "1.6.0",
   "description": "attempts to reformat javascript to comply with feross/standard style but with semicolons",
   "main": "index.js",
   "bin": "./bin.js",
   "scripts": {
-    "test": "semistandard && tape test/*.js | tap-spec",
+    "test": "standard && tape test/*.js | tap-spec",
     "test-file": "<test.js ./bin.js | semistandard",
     "failing": "semistandard && tape test/failing/*.js | tap-spec"
   },
@@ -20,16 +20,15 @@
   },
   "homepage": "https://github.com/ricardofbarros/semistandard-format",
   "dependencies": {
+    "deglob": "^1.0.0",
     "esformatter": "^0.7.0",
     "esformatter-eol-last": "^1.0.0",
+    "esformatter-jsx": "^1.3.0",
     "esformatter-literal-notation": "^1.0.0",
     "esformatter-quotes": "^1.0.0",
     "esformatter-semicolons": "^1.0.3",
     "esformatter-semicolon-first": "^1.0.1",
     "esformatter-spaced-lined-comment": "^2.0.0",
-    "find-root": "^0.1.1",
-    "glob": "^5.0.5",
-    "minimatch": "^2.0.1",
     "minimist": "^1.1.0",
     "stdin": "0.0.1"
   },
@@ -44,7 +43,7 @@
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0"
   },
-  "semistandard": {
+  "standard": {
     "ignore": [
       "test.js",
       "**test/failing/**"

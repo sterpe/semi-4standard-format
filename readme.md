@@ -26,6 +26,11 @@
 
     $ semistandard-format -w file1.js file2.js
 
+### Editor plugins
+
+  - Sublime Text: [sublime-standard-format](https://packagecontrol.io/packages/StandardFormat)
+  - Atom: [atom-standard-formatter](https://atom.io/packages/standard-formatter)
+
 ### Science :mortar_board:
 
   > A new step should be added to the modification cycle: modifying the program to make it readable.
