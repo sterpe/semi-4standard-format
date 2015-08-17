@@ -7,8 +7,8 @@ var noops = [
     'export default class Foo extends Component {\n' +
     '  renderPartial() {\n' +
     '    return this.props.bar.map((item) => {\n' +
-    '      return <Bar key={item.foo} data={item}/>\n' +
-    '    })\n' +
+    '      return <Bar key={item.foo} data={item}/>;\n' +
+    '    });\n' +
     '  }\n' +
     '}\n',
 
