@@ -20,9 +20,9 @@ module.exports.transform = function (file) {
   file = file
     .replace(MULTI_NEWLINE_N, '\n\n')
     .replace(MULTI_NEWLINE_RN, '\r\n\r\n')
+    .replace(SOF_NEWLINES, '')
 
   var formatted = formatter.format(file, ESFORMATTER_CONFIG)
-    .replace(SOF_NEWLINES, '')
 
   return formatted
 }
