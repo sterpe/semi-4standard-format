@@ -1,6 +1,6 @@
 {
   "name": "semistandard-format",
-  "version": "1.6.7",
+  "version": "2.1.0",
   "description": "attempts to reformat javascript to comply with feross/standard style but with semicolons",
   "main": "index.js",
   "bin": "./bin.js",
@@ -21,9 +21,9 @@
   "homepage": "https://github.com/ricardofbarros/semistandard-format",
   "dependencies": {
     "deglob": "^1.0.0",
-    "esformatter": "^0.7.3",
+    "esformatter": "^0.8.1",
     "esformatter-eol-last": "^1.0.0",
-    "esformatter-jsx": "^2.0.11",
+    "esformatter-jsx": "^3.0.0",
     "esformatter-literal-notation": "^1.0.0",
     "esformatter-quotes": "^1.0.0",
     "esformatter-semicolons": "^1.0.3",
