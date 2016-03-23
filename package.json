@@ -1,7 +1,7 @@
 {
-  "name": "semistandard-format",
+  "name": "semi-4standard-format",
   "version": "2.1.0",
-  "description": "attempts to reformat javascript to comply with feross/standard style but with semicolons",
+  "description": "attempts to reformat javascript to comply with feross/standard style but with semicolons and 4 space tabs",
   "main": "index.js",
   "bin": "./bin.js",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricardofbarros/semistandard-format.git"
+    "url": "https://github.com/sterpe/semi-4standard-format.git"
   },
   "author": "max ogden",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/ricardofbarros/semistandard-format/issues"
+    "url": "https://github.com/sterpe/semi-4standard-format/issues"
   },
-  "homepage": "https://github.com/ricardofbarros/semistandard-format",
+  "homepage": "https://github.com/sterpe/semi-4standard-format",
   "dependencies": {
     "deglob": "^1.0.0",
     "esformatter": "^0.8.1",
